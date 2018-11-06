@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test websocket app</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="stylesheets/libs/bootstrap4.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+
+<body id="body">
+<div class="container">
+    <div class="row">
+        <h3 class="text-right">Websocket test app</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-8"><input placeholder="Websocket path (e.q ws://localhost:3000/socket/history/)" value="ws://192.168.1.209:6789/" type="text" id="wsurl" class="inputwstest"></div>
+        <div class="col-md-2"><button id="wsstart">Start ws</button></div>
+        <div class="col-md-2"><button id="wsstop">Send stop</button><span id="stopSignal">no</span></div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-md-8"></div>
+        <div class="col-md-2"><button id="wsClose">Close ws</button></div>
+    </div>
+    <div class="row"style="margin-top: 50px; ">
+        <div class="col-md-8">
+            <textarea value='123s' placeholder="What should we send on open socket event?"   style="width: 100%; padding: 10px" name="wstest-testarea" id="tafild" class="ws-textarea" rows="10"></textarea>
+        </div>
+        <div class="col-md-2">
+            <div>Symbols count:</div><span id="taSymbolsCount">0</span>
+        </div>
+        <div class="col-md-2">
+            <button id="wssend">Send</button>
+        </div>
+    </div>
+    <div class="wsPathInfo">
+        <h5>Path:</h5>
+            <span id="wsPathInfo__span" class="wsPathInfo__span">Not filled</span>
+    </div>
+
+    <div class="row"style="margin-top: 50px; ">
+        <div class="col-md-8">
+            <textarea id="textareaResponse" disabled placeholder="Socket response output"  style="width: 100%; padding: 10px" name="wstest-testarea" id="taSocketOutput" class="ws-textarea" rows="2"></textarea>
+        </div>
+
+        <!--<div clsass="col-md-4">-->
+            <!--<div>Symbols count:</div><span id="taWsOutput">0</span>-->
+        <!--</div>-->
+    </div>
+
+</div>
+
+<script src="js/libs/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<script src="js/libs/popper.min.js"></script>
+<!--<script src="js/libs/bootstrap.min.js"></script>-->
+<script src="js/main.js"></script>
+
+<!--<script src="js/ajax/ajax.js"></script>-->
+<!--<script src="js/sockets/sockets.js"></script>-->
+<!--<script src="js/interface.js"></script>-->
+</body>
+
+</html>
